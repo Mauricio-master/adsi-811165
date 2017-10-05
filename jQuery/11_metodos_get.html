@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos GET jQuery</title>
+	<style>
+		p, ul {
+			border: 1px solid gray;
+			padding: 20px;
+			width: 200px;
+		}
+		input, button {
+			width: 240px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Métodos GET jQuery</h1>
+	<hr>
+	<p>
+		Lorem Ipsum Dolor
+	</p>
+	<button id="btn1">Mostrar Texto del Parrafo</button>
+	<hr>
+	<ul>
+		<li>Colombia</li>
+		<li>Peru</li>
+		<li>Bolivia</li>
+		<li>Argentina</li>
+	</ul>
+	<button id="btn2">Mostrar HTML del UL</button>
+	<hr>
+	<input type="text" value="Jeremias Springfield">
+	<br>
+	<button id="btn3">Mostrar Valor del Input</button>
+	<hr>
+	<a href="http://www.google.com">Ir a Google</a>
+	<br>
+	<button id="btn4">Mostrar Atributo href del Enlace</button>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			/* - - - - - - - - - - - - - - - - - */
+			$('#btn1').click(function(event) {
+				alert($('p').text());
+			});
+			/* - - - - - - - - - - - - - - - - - */
+			$('#btn2').click(function(event) {
+				alert($('ul').html());
+			});
+			/* - - - - - - - - - - - - - - - - - */
+			$('#btn3').click(function(event) {
+				alert($('input').val());
+			});
+			/* - - - - - - - - - - - - - - - - - */
+			$('#btn4').click(function(event) {
+				alert($('a').attr('href'));
+			});
+			/* - - - - - - - - - - - - - - - - - */
+		});
+	</script>
+
+
+</body>
+</html>

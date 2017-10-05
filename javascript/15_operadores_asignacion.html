@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores Asignación</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			color: #777;
+			font: 16px Arial;
+			padding: 4px;
+			margin: 100px auto;
+			width: 800px;
+		}
+		table td, table th {
+			border: 1px dotted #ccc;
+			padding: 8px;
+		}
+		table th {
+			background-color: #aaa;
+			color: #fff;
+		}
+		table tr:nth-child(even) {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th colspan="4">Operadores Asignación</th>
+			</tr>
+			<tr>
+				<th>Operador</th>
+				<th>Ejemplo</th>
+				<th>Igual</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>=</td>
+				<td>x=y</td>
+				<td>x=5</td>
+				<td id="r1"></td>
+			</tr>
+			<tr>
+				<td>+=</td>
+				<td>x+=y</td>
+				<td>x=x+y</td>
+				<td id="r2"></td>
+			</tr>
+			<tr>
+				<td>-=</td>
+				<td>x-=y</td>
+				<td>x=x-y</td>
+				<td id="r3"></td>
+			</tr>
+			<tr>
+				<td>*=</td>
+				<td>x*=y</td>
+				<td>x=x*y</td>
+				<td id="r4"></td>
+			</tr>
+			<tr>
+				<td>/=</td>
+				<td>x/=y</td>
+				<td>x=x/y</td>
+				<td id="r5"></td>
+			</tr>
+			<tr>
+				<td>%=</td>
+				<td>x%=y</td>
+				<td>x=x%y</td>
+				<td id="r6"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		// V A R I A B L E S
+		var x  = 10;
+		var y  = 5;
+		var r1 = document.getElementById('r1');
+		var r2 = document.getElementById('r2');
+		var r3 = document.getElementById('r3');
+		var r4 = document.getElementById('r4');
+		var r5 = document.getElementById('r5');
+		var r6 = document.getElementById('r6');
+
+		// R E S P U E S T A S
+		x = y;
+		r1.innerHTML = x;
+		x = 10;
+		r2.innerHTML = x += y;
+		x = 10;
+		r3.innerHTML = x -= y;
+		x = 10;
+		r4.innerHTML = x *= y;
+		x = 10;
+		r5.innerHTML = x /= y;
+		x = 10;
+		r6.innerHTML = x %= y;
+
+	</script>
+</body>
+</html>

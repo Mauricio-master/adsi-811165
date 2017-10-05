@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo Básico jQuery</title>
+	<style>
+		body {
+			font-family: Arial;
+		}
+		p {
+			background-color: #eee;
+			border: 4px solid #aaa;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejemplo Básico jQuery</h1>
+	<hr>
+	<article>
+		<h1>Lista de Párrafos</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum alias atque consequuntur id et aliquid voluptatibus, quis error. Similique omnis deleniti deserunt adipisci iusto suscipit aperiam vero officiis sed quibusdam.</p>
+		<p>Eveniet optio eaque, excepturi atque repellat vitae harum, quasi est laboriosam dolor odit unde reiciendis assumenda. Repellat quidem distinctio velit, ad repudiandae ipsa facilis ipsum dolorum asperiores, ducimus adipisci, reprehenderit.</p>
+		<p>Quas nulla autem assumenda expedita culpa, veritatis alias, deleniti obcaecati, quaerat molestias, blanditiis! Officia, similique. Culpa eos porro, omnis, aliquid totam odit maxime pariatur modi dolorum nostrum sed earum dolorem.</p>
+		<p>Possimus, itaque iusto deserunt ipsum fugiat necessitatibus quasi sapiente maxime modi, impedit voluptates et nemo alias eos officia cum. Non dolorum nemo est ullam expedita maiores impedit consectetur, iure repudiandae.</p>
+		<p>Ullam, tempore quia nostrum maxime architecto repellendus autem ut id voluptatem incidunt, necessitatibus labore, earum vero? Repudiandae libero quisquam temporibus repellendus, tempore eligendi alias et veniam vel, impedit quibusdam maxime!</p>
+	</article>
+	<button>Eliminar Párrafo</button>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('button').click(function(event) {
+				$('p').first().remove();
+			});
+		});
+	</script>
+</body>
+</html>

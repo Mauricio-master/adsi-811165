@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animación jQuery</title>
+	<style>
+		.ball {
+			background-color: #a73e51;
+			border-radius: 50%;
+			height: 200px;
+			margin: 50px auto;
+			position: relative;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Animación jQuery</h1>
+	<hr>
+	<div class="ball"></div>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('body').on('mouseover', '.ball', function(event) {
+				event.preventDefault();
+				$(this).stop().animate({width: 400+'px', height: 400+'px'}, 1000);
+			});
+			$('body').on('mouseleave', '.ball', function(event) {
+				event.preventDefault();
+				$(this).stop().animate({width: 200+'px', height: 200+'px'}, 1000);
+			});
+		});
+	</script>
+</body>
+</html>

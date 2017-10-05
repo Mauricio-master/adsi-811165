@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax GET jQuery</title>
+</head>
+<body>
+	<h1>Ajax GET jQuery</h1>
+	<hr>
+	<select id="marcas">
+		<option value="0">Seleccione una marca de Bicicletas</option>
+		<option value="1">SantaCruz</option>
+		<option value="2">Specialized</option>
+		<option value="3">Trek</option>
+		<option value="4">Giant</option>
+	</select>
+	<img src="imgs/loading.gif" id="loading" width="20px">
+	<select id="referencias" disabled></select>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('#loading').hide();
+
+			$('#marcas').change(function(event) {
+				$marca = parseInt($(this).val());
+
+				if($marca != 0) {
+					$.get('marcas.php',{ marca: $marca}, function(data) {
+						console.log(data);
+						$('#loading').show();
+						$('#referencias').hide();
+						setTimeout(function() {
+							$('#loading').hide();
+							$('#referencias').removeAttr('disabled');
+							$('#referencias').show().html(data);
+						}, 1000);
+						
+					});
+				} else {
+					alert('Debe seleccionar una marca de bicicletas');
+				}
+				
+			});
+		});
+	</script>
+</body>
+</html>

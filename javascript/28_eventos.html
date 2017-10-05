@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos JS</title>
+	<style>
+		html {
+			background: -webkit-radial-gradient(#6a81dd, #5b5bb7);
+			height: 100%;
+		}
+		body {
+			font: 16px Arial;
+			margin: 0px;
+		}
+		h1 {
+			color: #fff;
+			background-color: rgba(0,0,0,0.3);
+			font-size: 1.4em;
+			margin: 0px;
+			padding: 20px;
+			text-transform: uppercase;
+		}
+		hr {
+			margin: 0px;
+			border: 1px solid rgba(255,255,255,0.3);
+		}
+		select {
+			-webkit-appearance: none;
+			background: #fff url(imgs/down-arrow.png) no-repeat 200px center;
+			background-size: 12%;
+			color: #666;
+			border: none;
+			border-radius: 0px;
+			font-size: 16px;
+			outline: none;
+			padding: 20px;
+			margin: 20px 0px 0px 20px;
+			width: 240px;
+		}
+		figure#car {
+			height: 200px;
+			margin: 50px auto;
+			position: relative;
+			width: 400px;
+			-webkit-transition: 0.5s all;
+		}
+		figure#car.car1 {
+			background: url(imgs/car1.png) no-repeat;
+		}
+		figure#car.car2 {
+			background: url(imgs/car2.png) no-repeat;
+		}
+		figure#car.car3 {
+			background: url(imgs/car3.png) no-repeat;
+		}
+
+		figure#car.out-anim {
+			-webkit-animation: 0.5s animOut ease-in 1;
+		}
+		@-webkit-keyframes animOut{
+			0%   { -webkit-transform: translateX(0px);     }
+			60%  { -webkit-transform: translateX(-100px);  }
+			100% { -webkit-transform: translateX(1000px);  }
+		}
+		figure#car.in-anim {
+			-webkit-animation: 0.5s animIn ease-in 1;
+		}
+		@-webkit-keyframes animIn{
+			0%   { -webkit-transform: translateX(-1000px);  }
+			100% { -webkit-transform: translateX(0px);  }
+		}
+	</style>
+</head>
+<body id="doc">
+	<h1>Eventos JS</h1>
+	<hr>
+
+	<select id="tcar">
+		<option value="">Seleccione Vehículo...</option>
+		<option value="1">Vehículo 1</option>
+		<option value="2">Vehículo 2</option>
+		<option value="3">Vehículo 3</option>
+	</select>
+	<figure id="car"></figure>
+
+	<script>
+		var doc  = document.getElementById('doc');
+		var tcar = document.getElementById('tcar');
+		var  car = document.getElementById('car');
+		var pl   = 0; // pos. izquierda
+		var pt   = 0; // pos. superior
+		car.classList.add('car1');
+
+		doc.onkeydown = function(evt) {
+			switch(evt.keyCode) {
+				case 37:
+					console.log("LEFT");
+					pl -= 20;
+					car.style.left = pl+'px';
+					break;
+				case 38:
+					console.log("TOP");
+					pt -= 20;
+					car.style.top = pt+'px';
+					break;
+				case 39:
+					console.log("RIGHT");
+					pl += 20;
+					car.style.left = pl+'px';
+					break;
+				case 40:
+					console.log("BOTTOM");
+					pt += 20;
+					car.style.top = pt+'px';
+					break;			
+			}
+		}
+
+		tcar.onchange = function() {
+			//car.className = ''; // Eliminar todas las clases
+			car.classList.remove('in-anim');
+			car.classList.add('out-anim');
+			if(this.value == 1) {
+				setTimeout(function() {
+					car.classList.remove('car2', 'car3', 'out-anim');
+					car.classList.add('in-anim', 'car1');
+				},500);
+			}
+			if(this.value == 2) {
+				setTimeout(function() {
+					car.classList.remove('car1', 'car3', 'out-anim');
+					car.classList.add('in-anim', 'car2');
+				},500);
+			}
+			if(this.value == 3) {
+				setTimeout(function() {
+					car.classList.remove('car1', 'car2', 'out-anim');
+					car.classList.add('in-anim', 'car3');
+				},500);
+			}
+		}
+	</script>
+
+</body>
+</html>

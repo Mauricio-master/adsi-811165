@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Eventos Tiempo (JS)</title>
+	<style>
+		body {
+			font: 18px Tahoma;
+		}
+		main {
+			text-align: center;
+		}
+		.fx {
+			font-size: 8em;
+			-webkit-animation: 1s animFx ease-in 1 forwards;
+		}
+		@-webkit-keyframes animFx {
+			0% { 
+				opacity: 0;
+				-webkit-transform: scale(0.1); 
+			}
+			90% {
+				opacity: 0.8;
+				-webkit-transform: scale(1.4); 
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: scale(1); 
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Reto Eventos Tiempo (JS)</h1>
+		<hr>
+		<input type="number" id="time" min="1" max="3600">
+		<button id="countdown"> Iniciar</button>
+		<h1 id="count"></h1>
+	</main>
+	
+
+	<script>
+		var countdown = document.getElementById('countdown');
+		countdown.onclick = function() {
+			var time = document.getElementById('time').value;
+
+			var intervalo = setInterval(function() {
+				if(time == 0) {
+					clearInterval(intervalo);
+				}
+				count.classList.remove('fx');
+				count.offsetWidth = count.offsetWidth;
+				count.classList.add('fx');
+
+				count.innerHTML = time;
+				time--;
+			},1000);
+
+
+		}
+	</script>
+</body>
+</html>

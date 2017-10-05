@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos de Tiempo (JS)</title>
+</head>
+<body>
+	<h1>Eventos de Tiempo (JS)</h1>
+	<hr>
+	<h3 id="tiempo"></h3>
+
+	<script>
+		var tiempo   = document.getElementById('tiempo');
+		var contador = 1;
+		setTimeout(function() {
+			alert('Han pasado 5 Segundos');
+		},5000);
+
+		var intervalo = setInterval(function() {
+			if(contador == 60) {
+				clearInterval(intervalo);
+			}
+			tiempo.innerHTML = contador+' segundos';
+			contador++;
+		},1000);
+	</script>
+</body>
+</html>

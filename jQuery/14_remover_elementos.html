@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remover Elementos jQuery</title>
+	<style>
+		body {
+			background-color: #dfb047;
+			font-family: Arial;
+			text-align: center
+		}
+		ul#tareas {
+			background-color: #9b7a33;
+			color: #fff;
+			list-style: none;
+			margin: 20px auto;
+			text-align: left;
+			padding: 20px;
+			width: 300px;
+		}
+		ul#tareas li {
+			border-top: 1px solid #dfb047;
+			padding: 10px;
+		}
+		ul#tareas li:last-child {
+			border-bottom: 1px solid #dfb047;
+		}
+	</style>
+</head>
+<body>
+	<h1>Remover Elementos jQuery</h1>
+	<hr>
+	<h2>Lista de Tareas</h2>
+	<ul id="tareas">
+		<li> <button> &times; </button> Ir al SENA </li>
+		<li> <button> &times; </button> Localizar el CPIC</li>
+		<li> <button> &times; </button> Ingresar a sistemas 1</li>
+		<li> <button> &times; </button> Decir buenos días</li>
+		<li> <button> &times; </button> Buscar equipo para trabajar</li>
+		<li> <button> &times; </button> Abrir editor de texto</li>
+		<li> <button> &times; </button> Guardar trabajo</li>
+	</ul>
+	<button id="vaciar"> Eliminar Todas las Tareas</button>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			/* - - - - - - - - - - - - - - */
+			$('ul#tareas li button').click(function(event) {
+				$(this).parent().remove();
+			});
+			/* - - - - - - - - - - - - - - */
+			$('#vaciar').click(function(event) {
+				$('#tareas').empty();
+			});
+		});
+	</script>
+</body>
+</html>

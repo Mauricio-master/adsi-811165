@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo con Funciones JS</title>
+	<style>
+		body {
+			background-color: teal;
+			font: 16px Arial;
+		}
+		nav {
+			margin: 150px auto;
+			width: 1140px;
+		}
+		nav ul.products {
+			list-style: none;
+			margin: 0px;
+			padding: 20px;
+		}
+		nav ul.products li {
+			border: 4px solid #005050;
+			border-radius: 10px;
+			background-color: #fff;
+			display: inline-block;
+			height: 300px;
+			margin-right: 50px;
+			vertical-align: top;
+			overflow: hidden;
+			padding: 10px;
+			width: 300px;
+		}
+		nav ul.products li:last-child {
+			margin-right: 0px;
+		}
+		nav ul.products li div figure.img {
+			height: 200px;
+			margin: 30px auto;
+			width: 280px;
+		}
+		nav ul.products li div figure.img1 {
+			background: url(imgs/bike01.png) no-repeat center center; 
+			background-size: 114%;
+		}
+		nav ul.products li div figure.img2 {
+			background: url(imgs/bike02.jpg) no-repeat center center; 
+			background-size: 100%;
+		}
+		nav ul.products li div figure.img3 {
+			background: url(imgs/bike03.jpg) no-repeat center center; 
+			background-size: 100%;
+		}
+		nav ul.products li div button {
+			background-color: teal;
+			border: none;
+			border-radius: 100px;
+			color: #fff;
+			font: 16px Arial;
+			display: block;
+			padding: 10px;
+			margin: -20px auto 0px auto;
+			width: 140px;
+			-webkit-transition: 0.5s all ease-in;
+		}
+		nav ul.products li div button:hover {
+			cursor: pointer;
+			background-color: #006d6d;
+			-webkit-transform: scale(1.1);
+		}
+
+		.movedown {
+			-webkit-animation: 1s animMoveDown 1 forwards;
+		}
+
+		@-webkit-keyframes animMoveDown {
+			0% {
+				-webkit-transform: translateY(0px);
+			}
+			100% {
+				-webkit-transform: translateY(320px);
+			}
+		}
+
+		.moveup{
+			-webkit-animation: 1s animMoveUp 1 forwards;
+		}
+
+		@-webkit-keyframes animMoveUp {
+			0% {
+				-webkit-transform: translateY(320px);
+			}
+			100% {
+				-webkit-transform: translateY(0px);
+			}
+		}
+
+		section.block {
+			position: relative;
+			top: -320px;
+		}
+
+		div.info {
+			border-radius: 10px;
+			background: -webkit-linear-gradient(top, #000, #777);
+			color: #aaa;
+			height: 280px;
+			padding: 10px;
+			position: relative;
+		}
+		div.info h2 {
+			margin: 0px;
+			color: #fff;
+		}
+		div.info p {
+			text-align: justify;
+			line-height: 22px;
+		}
+		div.info span {
+			background-color: #df1441;
+			border-radius: 20px;
+			height: 20px;
+			color: #fff;
+			display: block;
+			font-size: 1.4em;
+			text-align: center;
+			line-height: 22px;
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			width: 20px;
+		}
+		div.info span:hover {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="products">
+			<li id="pr1">
+				<section class="block">
+					<div class="info">
+						<h2>Yeti SBC 5</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloribus, maxime similique neque officia deserunt harum eveniet quo nisi veniam nihil autem ratione, earum eos officiis rem, enim voluptatibus odio.
+						</p>
+						<span id="close1"> &times; </span>
+					</div>
+					<div class="state">
+						<figure class="img img1"></figure>
+						<button id="btn1"> Ver + </button>
+					</div>
+				</section>
+			</li>
+			<li id="pr2">
+				<section class="block">
+					<div class="info">
+						<h2>Intense Recluse</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloribus, maxime similique neque officia deserunt harum eveniet quo nisi veniam nihil autem ratione, earum eos officiis rem, enim voluptatibus odio.
+						</p>
+						<span id="close2"> &times; </span>
+					</div>
+					<div class="state">
+						<figure class="img img2"></figure>
+						<button id="btn2"> Ver + </button>
+					</div>
+				</section>
+			</li>
+			<li id="pr3">
+				<section class="block">
+					<div class="info">
+						<h2>Santa Cruz Nomad</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis doloribus, maxime similique neque officia deserunt harum eveniet quo nisi veniam nihil autem ratione, earum eos officiis rem, enim voluptatibus odio.
+						</p>
+						<span id="close3"> &times; </span>
+					</div>
+					<div class="state">
+						<figure class="img img3"></figure>
+						<button id="btn3"> Ver + </button>
+					</div>
+				</section>
+			</li>
+		</ul>
+	</nav>
+
+	<script>
+		var blocks = document.getElementsByClassName('block');
+		var btn1   = document.getElementById('btn1');
+		var btn2   = document.getElementById('btn2');
+		var btn3   = document.getElementById('btn3');
+
+		var close1 = document.getElementById('close1');
+		var close2 = document.getElementById('close2');
+		var close3 = document.getElementById('close3');
+
+		function toggleFx(inx, dir) {
+			if(dir == 'down') {
+				blocks[inx].classList.remove('moveup');
+				blocks[inx].classList.add('movedown');
+			} else {
+				blocks[inx].classList.remove('movedown');
+				blocks[inx].classList.add('moveup');
+			}
+		}
+		btn1.onclick = function() {
+			toggleFx(0, 'down');
+		}
+		btn2.onclick = function() {
+			toggleFx(1, 'down');
+		}
+		btn3.onclick = function() {
+			toggleFx(2, 'down');
+		}
+		close1.onclick = function() {
+			toggleFx(0, 'up');
+		}
+		close2.onclick = function() {
+			toggleFx(1, 'up');
+		}
+		close3.onclick = function() {
+			toggleFx(2, 'up');
+		}
+	</script>
+</body>
+</html>

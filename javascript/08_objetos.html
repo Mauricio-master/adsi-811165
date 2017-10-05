@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos - Acceso Atributos/Métodos</title>
+</head>
+<body>
+	<h1>Objetos - Acceso Atributos/Métodos</h1>
+	<hr>
+	<ul id="info"></ul>
+
+	<script>
+		var info = document.getElementById('info');
+
+		// Crear el objeto (Atributos y Clases)
+		var pokemon = {
+			nombre: 'Pikachu',
+			tipo: 'Eléctrico',
+			genero: 'Masculino',
+			atacar: function() {
+				return 'Trueno';
+			},
+			defender: function() {
+				return 'Campo Eléctrico';
+			},
+			evolucionar: function() {
+				this.nombre = 'Raichu';
+			}
+		}
+		// Acceso Atributos
+		info.innerHTML  = "<li> <strong>Nombre: </strong>"+pokemon.nombre+"</li>";
+		info.innerHTML += "<li> <strong>Tipo: </strong>"+pokemon.tipo+"</li>";
+		info.innerHTML += "<li> <strong>Genero: </strong>"+pokemon.genero+"</li>";
+		
+		// Acceso Métodos
+		info.innerHTML += "<li> <strong>Ataque: </strong>"+pokemon.atacar()+"</li>";
+		info.innerHTML += "<li> <strong>Defensa: </strong>"+pokemon.defender()+"</li>";
+		pokemon.evolucionar();
+		info.innerHTML += "<li> <strong>Nuevo Nombre: </strong>"+pokemon.nombre+"</li>";
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+{
+	"game1": {
+		"name": "Mario Bross"
+	},
+	"game2": {
+		"name": "Kirby Deluxe"
+	},
+	"game3": {
+		"name": "Super Metroid"
+	},
+	"game4": {
+		"name": "Punch Out"
+	},
+	"game5": {
+		"name": "Donkey Kong"
+	},
+	"game6": {
+		"name": "Legend Of Zelda"
+	},
+	"game7": {
+		"name": "Contra"
+	},
+	"game8": {
+		"name": "BattleToads"
+	},
+	"game9": {
+		"name": "Street Fighters"
+	},
+	"game10": {
+		"name": "Mega Man"
+	}
+}

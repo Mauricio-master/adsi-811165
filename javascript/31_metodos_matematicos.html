@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos Matemáticos JS</title>
+</head>
+<body>
+	<h1>Métodos Matemáticos JS</h1>
+	<hr>
+	<h3>Números Aleatorios (1-100)</h3>
+	<button id="btnAleatorio"> Mostrar Número: ? </button>
+	<!--  -->
+	<h3>Imágenes Aleatorias (5 imágenes)</h3>
+	<figure id="image" width="200px"></figure>
+	<button id="btnImagen"> Mostrar Imagen </button>
+	<!--  -->
+	<h3>Número Máximo/Mínimo (8, 2, 24, 32, 16)</h3>
+	El número máximo es: <output id="txtMax"></output>
+	<br>
+	El número mínimo es: <output id="txtMin"></output>
+	<!--  -->
+	<h3>Redondear Número</h3>
+	<input id="numero" type="number" placeholder="Ingrese un número décimal">
+	<button id="btnRedondear"> Calcular </button>
+	<ul id="resultados"></ul>
+	<!--  -->
+	<h3>Elevar un número a X potencia (Exponenciación)</h3>
+	<input id="base" type="number" placeholder="Ingrese número base">
+	<input id="exp"  type="number" placeholder="Ingrese número a ser elevado">
+	<button id="btnExp"> Resultado</button>
+	<br>
+	<output id="resexp"></output>
+	<!--  -->
+	<script>
+		var btnAleatorio = document.getElementById('btnAleatorio');
+		var btnImagen    = document.getElementById('btnImagen');
+		var btnRedondear = document.getElementById('btnRedondear');
+		var btnExp       = document.getElementById('btnExp');
+
+		var image    = document.getElementById('image');
+		var imagenes = [
+			'http://tinyurl.com/hx628w6',
+			'http://tinyurl.com/jumuymb',
+			'http://tinyurl.com/z67asnb',
+			'http://tinyurl.com/j46erlc',
+			'http://tinyurl.com/z7rczg5'
+		];
+
+		var txtMax = document.getElementById('txtMax');
+		var txtMin = document.getElementById('txtMin');
+
+		var resultados = document.getElementById('resultados');
+		var resexp     = document.getElementById('resexp');
+
+		txtMax.innerText = Math.max(8,2,24,32,16);
+		txtMin.innerText = Math.min(8,2,24,32,16);
+
+		btnAleatorio.onclick = function() {
+			var num = Math.round(Math.random()*100);
+			this.innerText = 'Mostrar Número: '+num;
+		}
+
+		btnImagen.onclick = function() {
+			var ima = Math.round(Math.random()*((imagenes.length)-1));
+			image.innerHTML = "<img src='"+imagenes[ima]+"'>";
+		}
+
+		btnRedondear.onclick = function() {
+			var numero = document.getElementById('numero').value;
+			resultados.innerHTML  = "<li> Round: "+Math.round(numero)+"</li>";
+			resultados.innerHTML += "<li> Ceil:  "+Math.ceil(numero)+"</li>";
+			resultados.innerHTML += "<li> Floor: "+Math.floor(numero)+"</li>";
+		}
+
+		btnExp.onclick = function() {
+			var base = document.getElementById('base').value;
+			var exp  = document.getElementById('exp').value;
+			resexp.innerText = Math.pow(base, exp);
+		}
+	</script>
+
+</body>
+</html>

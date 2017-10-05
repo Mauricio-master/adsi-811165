@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores Comparación</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			color: #777;
+			font: 16px Arial;
+			padding: 4px;
+			margin: 100px auto;
+			width: 800px;
+		}
+		table td, table th {
+			border: 1px dotted #ccc;
+			padding: 8px;
+		}
+		table th {
+			background-color: #aaa;
+			color: #fff;
+		}
+		table tr:nth-child(even) {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th colspan="4">Operadores Comparación</th>
+			</tr>
+			<tr>
+				<th>Operador</th>
+				<th>Descripción</th>
+				<th>Comparación</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>==</td>
+				<td>Es igual a</td>
+				<td>x==8</td>
+				<td id="r1"></td>
+			</tr>
+			<tr>
+				<td>===</td>
+				<td>Es exactamente igual a (valor y tipo)</td>
+				<td>x===5</td>
+				<td id="r2"></td>
+			</tr>
+			<tr>
+				<td>!=</td>
+				<td>No es igual</td>
+				<td>x!=8</td>
+				<td id="r3"></td>
+			</tr>
+			<tr>
+				<td>!==</td>
+				<td>No es igual (valor y tipo)</td>
+				<td>x!==5</td>
+				<td id="r4"></td>
+			</tr>
+			<tr>
+				<td>></td>
+				<td>Es mayor que</td>
+				<td>x>8</td>
+				<td id="r5"></td>
+			</tr>
+			<tr>
+				<td><</td>
+				<td>Es menor que</td>
+				<td>x<8</td>
+				<td id="r6"></td>
+			</tr>
+			<tr>
+				<td>>=</td>
+				<td>Es mayo o igual que</td>
+				<td>x>=8</td>
+				<td id="r7"></td>
+			</tr>
+			<tr>
+				<td><=</td>
+				<td>Es menor o igual que</td>
+				<td>x<=8</td>
+				<td id="r8"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		// V A R I A B L E S
+		var x  = 5;
+		var r1 = document.getElementById('r1');
+		var r2 = document.getElementById('r2');
+		var r3 = document.getElementById('r3');
+		var r4 = document.getElementById('r4');
+		var r5 = document.getElementById('r5');
+		var r6 = document.getElementById('r6');
+		var r7 = document.getElementById('r7');
+		var r8 = document.getElementById('r8');
+
+		// R E S P U E S T A S
+		r1.innerHTML = (x == 8);
+		r2.innerHTML = (x === 5);
+		r3.innerHTML = (x != 8);
+		r4.innerHTML = (x !== 5);
+		r5.innerHTML = (x > 8);
+		r6.innerHTML = (x < 8);
+		r7.innerHTML = (x >= 8);
+		r8.innerHTML = (x <= 8);
+
+	</script>
+</body>
+</html>

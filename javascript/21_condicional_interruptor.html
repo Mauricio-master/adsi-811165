@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional (Interruptor)</title>
+</head>
+<body>
+	<h1>Condicional (Interruptor)</h1>
+	<hr>
+	<h2 id="saludo"></h2>
+
+	<script>
+		var saludo = document.getElementById('saludo');
+		var fecha = new Date();
+
+		switch(fecha.getDay()) {
+			case 1:
+				saludo.innerText = "Hoy es Lunes";
+				break;
+			case 2:
+				saludo.innerText = "Hoy es Martes";
+				break;
+			case 3:
+				saludo.innerText = "Hoy es Miércoles";
+				break;
+			case 4:
+				saludo.innerText = "Hoy es Jueves";
+				break;
+			case 5:
+				saludo.innerText = "Hoy es Viernes";
+				break;
+			default:
+				saludo.innerText = "Feliz fin de semana";
+				break;
+		}
+	</script>
+</body>
+</html>

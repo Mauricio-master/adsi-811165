@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulación del DOM con JS</title>
+</head>
+<body>
+	<h1>Manipulación del DOM con JS</h1>
+	<hr>
+	<ul id="elemento">
+		<li>Hugo - Primer Hijo</li>
+		<li>Paco - Segundo Hijo</li>
+		<li>Luis - Tercer Hijo</li>
+	</ul>
+	<button onclick="manipular();"> Manipular DOM</button>
+
+	<script>
+		var elm = document.getElementById('elemento');
+		function manipular() {
+			elm.innerHTML = '<li> Soy hijo único </li>';
+		}
+	</script>
+</body>
+</html>

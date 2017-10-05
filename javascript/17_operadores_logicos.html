@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores Lógicos</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			color: #777;
+			font: 16px Arial;
+			padding: 4px;
+			margin: 100px auto;
+			width: 800px;
+		}
+		table td, table th {
+			border: 1px dotted #ccc;
+			padding: 8px;
+		}
+		table th {
+			background-color: #aaa;
+			color: #fff;
+		}
+		table tr:nth-child(even) {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th colspan="4">Operadores Lógicos</th>
+			</tr>
+			<tr>
+				<th>Operador</th>
+				<th>Descripción</th>
+				<th>Ejemplo</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&&</td>
+				<td>Y</td>
+				<td>(x<10 && y > 1)</td>
+				<td id="r1"></td>
+			</tr>
+			<tr>
+				<td>||</td>
+				<td>O</td>
+				<td>(x==5 || y == 5)</td>
+				<td id="r2"></td>
+			</tr>
+			<tr>
+				<td>!</td>
+				<td>No</td>
+				<td>!(x==y)</td>
+				<td id="r3"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		// V A R I A B L E S
+		var x  = 6;
+		var y  = 3;
+
+		var r1 = document.getElementById('r1');
+		var r2 = document.getElementById('r2');
+		var r3 = document.getElementById('r3');
+
+		// R E S P U E S T A S
+		r1.innerHTML = (x<10 && y > 1);
+		r2.innerHTML = (x==5 || y == 5);
+		r3.innerHTML = !(x==y);
+
+	</script>
+</body>
+</html>

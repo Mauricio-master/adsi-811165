@@ -1,0 +1,17 @@
+ul
+  each valor in [1, 2, 3, 4, 5]
+    li= valor
+ul
+  each numeros, indice in ['Cero', 'Uno', 'Dos', 'Tres', 'Cuatro']
+    li= indice + ': ' + numeros
+ul
+  each valor, indice in {1:'uno',2:'dos',3:'tres',4:'cuatro'}
+    li= indice + ': ' + valor
+- var valores = [];
+ul
+  each valor in valores.length ? valores : ['No hay valores']
+    li= valor
+- var n = 1
+ul
+  while n < 10
+    li= n++

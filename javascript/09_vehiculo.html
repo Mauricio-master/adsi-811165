@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos (Vehículo)</title>
+	<link rel="stylesheet" href="css/09_vehiculo.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body>
+	<ul id="info">
+		<li>INFORMACIÓN</li>
+		<li id="mar"></li>
+		<li id="ref"></li>
+		<li id="mod"></li>
+		<li id="ima"></li>
+		<li id="cil"></li>
+		<li>CONTROLES</li>
+		<li>
+			<i id="ini" class="fa fa-play-circle fa-2x"></i>
+			<i id="det" class="fa fa-stop-circle fa-2x"></i>
+			<i id="ava" class="fa fa-chevron-circle-right fa-2x"></i>
+			<i id="fre" class="fa fa-pause-circle fa-2x"></i>
+			<i id="giz" class="fa fa-arrow-circle-left fa-2x"></i>
+			<i id="gde" class="fa fa-arrow-circle-right fa-2x"></i>
+		</li>
+	</ul>
+
+	<div id="vhcl">
+		<div>
+			<img src="imgs/beetle.png" width="240px">
+		</div>
+	</div>
+	
+	<script src="js/vehiculo.js"></script>
+	<script>
+		vehiculo.info();
+		vehiculo.controles();
+	</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Estructura (Semántica)
+    style(rel='stylesheet').
+      body {
+        background-color: crimson;
+        color: white;
+        font: 16px Tahoma;
+      }
+      main {
+        background-color: rgba(0,0,0, 0.5);
+        margin: 0px auto;
+        padding: 20px;
+        width: 800px;
+      }
+      header figure{
+        text-align: center;
+      }
+      nav li {
+        background-color: crimson;
+        color: white;
+        display: inline-block;
+        list-style: none;
+        padding: 20px;
+        text-align: center;
+        width: 156px;
+        transition: all 0.1s ease-in;
+      }
+      nav li:hover, 
+      nav li:hover a{
+        background-color: white;
+        color: crimson;
+      }
+      nav li a {
+        color: white;
+        display: block;
+        height: 100%;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        width: 100%;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 36px;
+        letter-spacing: 2px;
+      }
+      article, aside {
+        display: inline-block;
+        line-height: 24px;
+        vertical-align: top;
+        text-align: justify;
+      }
+      article {
+        width: 500px;
+      }
+      aside {
+        width: 290px;
+      }
+      footer p {
+        text-align: center;
+      }
+  body
+    main
+      header
+        figure
+          img(src='http://tinyurl.com/hfym435', width='400')
+        nav
+          li: a(href='') Inicio
+          li: a(href='') Historia
+          li: a(href='') Personajes
+          li: a(href='') Episodios
+      section
+        article
+          h1 Personajes
+          figure
+            img(src='http://tinyurl.com/hjz6jrp')
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nisi quam eum commodi veritatis deleniti sapiente maxime, fuga accusamus id sint aut voluptates facere minima excepturi incidunt nesciunt optio omnis.
+        aside
+            h1 Episodios
+            ol
+              li Episodio
+              li Episodio
+              li Episodio
+              li Episodio
+              li Episodio
+      footer
+        p Todos los derechos reservados 2016
+    

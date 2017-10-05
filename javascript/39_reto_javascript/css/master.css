@@ -1,0 +1,129 @@
+
+body {
+	background: -webkit-radial-gradient(#6Bd688, #346842);
+	font-size: 16px;
+	font-family: Verdana;
+	height: 100vh;
+	overflow: hidden;
+}
+
+section {
+	background-color: #479059;
+	height: 400px;
+	margin: 120px auto;
+	width: 800px;
+}
+
+section#stage2,
+section#stage3 {
+	height: 410px;
+}
+
+section button {
+	background-color: #6Bd688;
+	color: #fff;
+	border: none;
+	display: block;
+	font-size: 1em;
+	padding: 10px 20px;
+	margin: 10px auto;
+	transition: all 0.5s ease-in;
+}
+
+section button:hover {
+	background-color: #346842;
+	cursor: pointer;
+}
+
+section nav.buttons {
+	margin: 0px auto;
+	width: 154px;
+}
+
+section nav.buttons button {
+	display: inline-block;
+}
+
+section header {
+	background-color: #346842;
+	margin: 0px auto;
+	padding: 20px;
+}
+section h2 {
+	color: #fff;
+	text-align: center;
+	font-weight: normal;
+}
+
+section input {
+	background-color: #CAFDDB;
+	color: #346842;
+	border: none;
+	font-size: 1em;
+	display: block;
+	margin: 60px auto;
+	padding: 20px;
+	outline: none;
+	text-transform: uppercase;
+	text-align: center;
+	width: 300px;
+}
+
+section p {
+	color: #fff;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+section p span#tplayer {
+	text-transform: uppercase;
+}
+
+nav {
+	margin: 0px auto;
+	width: 522px;
+}
+
+nav li {
+	height: 180px;
+	display: inline-block;
+	list-style: none;
+	opacity: 0.7;
+	margin-right: 10px;
+	width: 160px;
+	transition: all 0.5s ease-out;
+}
+
+nav li:hover,
+nav li.active {
+	cursor: pointer;
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+nav li#rock {
+	background: url(../imgs/rock.png) no-repeat center center;
+}
+nav li#paper {
+	background: url(../imgs/paper.png) no-repeat center center;
+}
+nav li#scissor {
+	background: url(../imgs/scissor.png) no-repeat center center;
+}
+
+nav#results {
+	width: 346px;
+}
+
+nav#results li {
+	transition: none;
+	opacity: 1;
+}
+
+nav#results li:hover {
+	cursor: default;
+	opacity: 1;
+	transform: scale(1);
+}
+
+

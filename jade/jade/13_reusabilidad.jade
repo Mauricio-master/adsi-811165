@@ -1,0 +1,50 @@
+//- Declaracion
+mixin lista
+  ul
+    li elemento1
+    li elemento2
+    li elemento3
+//- Uso
++lista
++lista
+
+
+//- Con Argumentos
+mixin mascota(name)
+  li.mascota= name
+ul
+  +mascota('gato')
+  +mascota('perro')
+  +mascota('cerdo')
+
+//- Bloque de contenido
+mixin articulo(title)
+  .article
+    .article-wrapper
+      h1= title
+      if block
+        block
+      else
+        p No hay contenido
+
++articulo('Hola Mundo!')
+
++articulo('Hola Mundo!')
+  p Este es mi
+  p Articulo 
+
+
+mixin link(href, name)
+  //- attributes == {class: "btn"}
+  a(class!=attributes.class, href=href)= name
+
++link('/nosotros', 'nosotros')(class="btn")
+
+
+
+mixin list(id, ...items)
+  ul(id=id)
+    each item in items
+      li= item
+
++list('mi-lista', 1, 2, 3, 4)

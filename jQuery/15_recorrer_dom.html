@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recorrer DOM jQuery</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		body {
+			background: -webkit-radial-gradient(#b298f8, #5538b5);
+			font: 16px Tahoma;
+			overflow: hidden;
+			height: 100vh;
+		}
+		h1 {
+			text-align: center;
+			color: #352374;
+		}
+		hr {
+			border: 2px dashed #352374;
+		}
+		section {
+			background-color: rgba(0,0,0,.2);
+			padding: 20px;
+			margin: 50px auto;
+			width: 900px;
+		}
+		ul {
+			list-style: none;
+			padding: 0px;
+		}
+		ul li {
+			background-position: center center;
+			border: 4px solid #352374;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: inline-block;
+			border-radius: 70px;
+			height: 132px;
+			margin-right: 6px;
+			width: 132px;
+		}
+		ul li:nth-child(1) { background-image: url(imgs/lego1.jpg); }
+		ul li:nth-child(2) { background-image: url(imgs/lego2.jpg); }
+		ul li:nth-child(3) { background-image: url(imgs/lego3.jpg); }
+		ul li:nth-child(4) { background-image: url(imgs/lego4.jpg); }
+		ul li:nth-child(5) { background-image: url(imgs/lego5.jpg); }
+		ul li:nth-child(6) { 
+			background-image: url(imgs/lego6.jpg); 
+			margin-right: 0px;
+		}
+		.actived {
+			border: 4px solid #fff;
+		}
+		nav {
+			text-align: center;
+		}
+		button {
+			border: none;
+			background-color: #352374;
+			color: #fff;
+			padding: 10px;
+		}
+		button:hover {
+			cursor: pointer;
+			background-color: #3e298f;
+		}
+	</style>
+</head>
+<body>
+	<h1>Recorrer DOM jQuery</h1>
+	<hr>
+	<section>
+		<ul>
+			<li class="animated"></li>
+			<li class="animated"></li>
+			<li class="animated"></li>
+			<li class="animated"></li>
+			<li class="animated"></li>
+			<li class="animated"></li>
+		</ul>
+		<nav>
+			<button id="btnFirst">Primero</button>
+			<button id="btnPrev">&#10094; Anterior </button>
+			<button id="btnNext">Siguiente &#10095; </button>
+			<button id="btnLast">Último</button>
+		</nav>
+	</section>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$fx = 'rubberBand';
+			$("ul li:first").addClass('actived '+$fx);
+			/* - - - - - - - - - - - - - - - - - - - - - */
+			$('#btnNext').click(function(event) {
+				$actual = $('li.actived');
+				if($('li:last').hasClass('actived')) {
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').first().addClass('actived '+$fx);
+				} else {
+					$('li.actived').removeClass('actived '+$fx);
+					$($actual).next().addClass('actived '+$fx);
+				}
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - */
+			$('#btnPrev').click(function(event) {
+				$actual = $('li.actived');
+				if($('li:first').hasClass('actived')) {
+					$('li.actived').removeClass('actived '+$fx);
+					$('ul li').last().addClass('actived '+$fx);
+				} else {
+					$('li.actived').removeClass('actived '+$fx);
+					$($actual).prev().addClass('actived '+$fx);
+				}
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - */
+			$('#btnFirst').click(function(event) {
+				$('li.actived').removeClass('actived '+$fx);
+				$('ul li').first().addClass('actived '+$fx);
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - */
+			$('#btnLast').click(function(event) {
+				$('li.actived').removeClass('actived '+$fx);
+				$('ul li').last().addClass('actived '+$fx);
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - */
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclo (break/continue) JS</title>
+</head>
+<body>
+	<h1>Ciclo (break/continue) JS</h1>
+	<hr>
+	<ul id="salida"></ul>
+
+	<script>
+		var salida = document.getElementById('salida');
+
+		for (var i = 1; i <= 10; i++) {
+			if(i == 3) continue;
+			if(i == 6) break;
+			salida.innerHTML += "<li>"+i+"</li>";
+		}
+	</script>
+</body>
+</html>

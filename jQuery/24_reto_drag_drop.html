@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrastrar / Solgar jQuery UI</title>
+	<style>
+		body {
+			background: -webkit-radial-gradient(#fff, #333);
+			font-family: verdana;
+			color: #fff;
+			overflow: hidden;
+			height: 100vh;
+		}
+		h1 {
+			color: #ccc;
+			font-weight: normal;
+			text-align: center;
+			text-shadow: 0px 0px 12px #000;
+			margin: 20px;
+		}
+		main {
+			background-color: #202020;
+			box-shadow: 0px 0px 12px 0px #000;
+			margin: 0px auto;
+			padding: 10px;
+			width: 432px;
+		}
+		main section {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		main section h2 {
+			background-color: #000;
+			font-size: 1em;
+			font-weight: normal;
+			text-align: center;
+			margin: 0px;
+			padding: 20px 24px;
+		}
+
+		main section.section1 h2 {
+			border-bottom: 6px solid #5ad269;
+		}
+
+		main section.section2 h2 {
+			border-bottom: 6px solid #6ba0d2;
+		}
+
+		main section.section3 h2 {
+			border-bottom: 6px solid #d26444;
+		}
+
+		main section div.cell {
+			background-color: #383838;
+			height: 136px;
+		}
+
+		figure {
+			margin: 0px;
+		}
+		.pokemon {
+			background-repeat: no-repeat;
+			background-position: center center;
+			height: 136px;
+			width: 134px;
+			animation: 1s animPokemon ease-in 1 forwards;
+		}
+		.bulbasour { background-image: url(imgs/bulbasaur.png); }
+		.ivysaur   { background-image: url(imgs/ivysaur.png); }
+		.venusaur  { background-image: url(imgs/venusaur.png); }
+
+		.charmander { background-image: url(imgs/charmander.png); }
+		.charmeleon { background-image: url(imgs/charmeleon.png); }
+		.charizard  { background-image: url(imgs/charizard.png); }
+
+		.squirtle  { background-image: url(imgs/squirtle.png); }
+		.wartortle { background-image: url(imgs/wartortle.png); }
+		.blastoise  { background-image: url(imgs/blastoise.png); }
+
+		@keyframes animPokemon {
+			0% {
+				opacity: 0;
+				transform: scale(.5)
+			}
+
+			90% {
+				opacity: .8;
+				transform: scale(1.1)
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1)
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Evolución de Pokemons</h1>
+	<main>
+		<section class="section1">
+			<h2>Evolución 1</h2>
+			<div class="cell">
+				<figure class="pokemon pk1 bulbasour"></figure>
+			</div>
+			<div class="cell">
+				<figure class="pokemon pk1 charmander"></figure>
+			</div>
+			<div class="cell">
+				<figure class="pokemon pk1 squirtle"></figure>
+			</div>
+		</section>
+		<section class="section2">
+			<h2>Evolución 2</h2>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</section>
+		<section class="section3">
+			<h2>Evolución 3</h2>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</section>
+	</main>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.pokemon').draggable({
+				containment: 'main',
+				cursor: 'move',
+				snap: '.cell',
+				snapMode: 'inner', 
+				revert: 'invalid'
+			});
+			$('.section2 .cell').droppable({
+				accept: ".pk1",
+				drop: function(event, ui) {
+					$ui    = $(ui.draggable);
+					$ui.removeClass('pokemon pk1');
+					setTimeout(function() {
+						if($ui.hasClass('bulbasour')){
+						$ui.addClass('pokemon pk2 ivysaur');
+						}
+						if($ui.hasClass('charmander')){
+							$ui.addClass('pokemon pk2 charmeleon');
+						}
+						if($ui.hasClass('squirtle')){
+							$ui.addClass('pokemon pk2 wartortle');
+						}
+					}, 250);
+				} 
+			});
+			$('.section3 .cell').droppable({
+				accept: ".pk2",
+				drop: function(event, ui) {
+					$ui = $(ui.draggable);
+					$ui.removeClass('pokemon pk2');
+					setTimeout(function() {
+						if($ui.hasClass('ivysaur')){
+							$ui.addClass('pokemon pk3 venusaur');
+						}
+						if($ui.hasClass('charmeleon')){
+							$ui.addClass('pokemon pk3 charizard');
+						}
+						if($ui.hasClass('wartortle')){
+							$ui.addClass('pokemon pk3 blastoise');
+						}
+					}, 250);
+				} 
+			});
+		});
+	</script>
+</body>
+</html>

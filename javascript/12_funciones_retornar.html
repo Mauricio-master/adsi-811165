@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones Retornar JS</title>
+</head>
+<body>
+	<h1>Funciones Retornar JS</h1>
+	<hr>
+
+	<fieldset>
+		<legend><h4>Operaciones Aritméticas</h4></legend>
+		<select id="op" required>
+			<option value="">Seleccione Operador...</option>
+			<option value="1">Sumar</option>
+			<option value="2">Restar</option>
+			<option value="3">Multiplicar</option>
+			<option value="4">Dividir</option>
+		</select>
+		<br>
+		<input type="number" id="n1" placeholder="Número 1" required>
+		<br>
+		<input type="number" id="n2" placeholder="Número 2" required>
+		<br>
+		<button onclick="calcular();">Calcular</button>
+	</fieldset>
+	<output id="resp"></output>
+
+	<script>
+			var re = document.getElementById('resp');
+
+			function sumar(n1, n2) {
+				return 'La suma es: '+ (n1 + n2);
+			}
+			function restar(n1, n2) {
+				return 'La resta es: '+ (n1 - n2);
+			}
+			function multiplicar(n1, n2) {
+				return 'El producto es: '+ (n1 * n2);
+			}
+			function dividir(n1, n2) {
+				return 'La división es: '+ (n1 / n2);
+			}
+
+		function calcular() {
+			var op = document.getElementById('op').value;
+			var n1 = parseFloat(document.getElementById('n1').value);
+			var n2 = parseFloat(document.getElementById('n2').value);
+
+			if(op == 1)
+				re.innerHTML = sumar(n1, n2);
+			if(op == 2)
+				re.innerHTML = restar(n1, n2);
+			if(op == 3)
+				re.innerHTML = multiplicar(n1, n2);
+			if(op == 4)
+				re.innerHTML = dividir(n1, n2);
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Código (jade)
+  body
+    h1 Código (jade)
+    // Ciclo For
+    ul
+      - for (var i = 1; i <= 10; i++)
+        li elemento #{i}
+    // Ciclo Each a un Arreglo    
+    ol
+      -
+        bicis = ["SantaCruz", "Giant", "Trek", "Cannondale", "Specialized", "Yeti"]
+      each bici in bicis
+        li= bici

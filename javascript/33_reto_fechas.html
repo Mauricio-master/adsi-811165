@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Fechas JS</title>
+</head>
+<body>
+	<fieldset>
+		<legend><h1>Reto Fechas (Número de Días/Meses/Años Vividos)</h1></legend>
+		<input type="number" id="dia" placeholder="Dia">
+		<br>
+		<input type="number" id="mes" placeholder="Mes">
+		<br>
+		<input type="number" id="ano" placeholder="Año">
+		<br>
+		<button id="calc">Calcular</button>
+	</fieldset>
+	<h2 id="mostrar"></h2>
+
+	<script>
+		var calc    = document.getElementById('calc');
+		var mostrar = document.getElementById('mostrar');
+		calc.onclick = function() {
+			var dia = document.getElementById('dia').value;
+			var mes = document.getElementById('mes').value;
+			var ano = document.getElementById('ano').value;
+
+			if(dia.length > 0 && mes.length > 0 && ano.length >0) {
+				var fecha = new Date();
+
+				var actfecha = new Date(fecha.getFullYear()+'/'+(fecha.getMonth()+1)+'/'+fecha.getDate());
+				var pasfecha = new Date(ano+'/'+mes+'/'+dia);
+
+				var resfecha = actfecha - pasfecha;
+					resfecha = (((resfecha/1000)/60)/60)/24;
+
+				mostrar.innerHTML  = 'Años: '+Math.floor(resfecha/365);
+				mostrar.innerHTML += ' | Días: '+resfecha;
+
+			} else {
+				alert('Debe llenar todos los campos solicitados!');
+			}
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos JS</title>
+</head>
+<body>
+	<h1>Ciclos JS</h1>
+	<hr>
+	<ul id="listaf1"></ul>
+	<ul id="listaf2"></ul>
+
+	<script>
+		var listaf1 = document.getElementById('listaf1');
+		var listaf2 = document.getElementById('listaf2');
+
+		var frutas = new Array('Manzana', 
+							   'Pera', 
+							   'Naranja', 
+							   'Guayaba', 
+							   'Sandia',
+							   'Mandarina',
+							   'Piña',
+							   'Fresa',
+							   'Mango',
+							   'Coco');
+
+		// Forma larga - sin ciclos 
+		listaf1.innerHTML  = '<li>'+frutas[0]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[1]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[2]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[3]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[4]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[5]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[6]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[7]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[8]+'</li>';
+		listaf1.innerHTML += '<li>'+frutas[9]+'</li>';
+
+		// Forma Corta - con ciclos
+		for (var i = 0; i <= frutas.length; i++) {
+			listaf2.innerHTML += '<li>'+frutas[i]+'</li>';
+		}
+
+	</script>
+</body>
+</html>

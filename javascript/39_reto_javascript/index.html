@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rock Paper Scissor</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+	<!-- STAGE1 - - - - - - - - - - - - - - - - - - - - - - - -->
+	<section class="animated" id="stage1" >
+		<header>
+			<h2>ROCK PAPER SCISSOR</h2>
+		</header>
+		<input type="text" id="name" placeholder="Player Name">
+		<button id="next"> OK </button>
+	</section>
+	<!-- STAGE2 - - - - - - - - - - - - - - - - - - - - - - - -->
+	<section class="animated" id="stage2">
+		<header>
+			<h2>ROCK PAPER SCISSOR</h2>
+		</header>
+		<p>
+			<span id="tplayer"></span>, Please select an option:
+		</p>
+		<nav>
+			<li class="option" id="rock"    data-option="0"></li>
+			<li class="option" id="paper"   data-option="1"></li>
+			<li class="option" id="scissor" data-option="2"></li>
+		</nav>
+		<nav class="buttons">
+			<button id="prev"> Back </button>
+			<button id="play"> Play </button>
+		</nav>
+	</section>
+	<!-- STAGE3 - - - - - - - - - - - - - - - - - - - - - - - -->
+	<section class="animated" id="stage3" >
+		<header>
+			<h2>ROCK PAPER SCISSOR</h2>
+		</header>
+		<p>
+			<span id="tresult"></span>
+		</p>
+		<nav id="results">
+		</nav>
+		<button id="reset"> Reset </button>
+	</section>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

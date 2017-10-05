@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Evento Scroll jQuery</title>
+	<style>
+		body {
+			font-family: Arial;
+			color: #333;
+		}
+		nav {
+			background-color: #333;
+			color: #ddd;
+			padding: 40px;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			animation: 0.5s animShowNav ease-in 1 forwards;
+		}
+		h1 {
+			padding-top: 140px;
+			text-align: center;
+		}
+		p {
+			color: #999;
+			padding: 20px;
+			margin: 0px auto;
+			width: 800px;
+		}
+
+		.hidenav {
+			animation: 0.5s animHideNav ease-in 1 forwards;
+		}
+
+		@keyframes animHideNav {
+			0% {
+				top: 0px;
+				opacity: 1;
+			}
+			100% {
+				top: -100px;
+				opacity: 0;
+			}
+		}
+
+		@keyframes animShowNav {
+			0% {
+				top: -100px;
+				opacity: 0;
+			}
+			100% {
+				top: 0px;
+				opacity: 1;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		Menu de Opciones
+	</nav>
+	<h1>Reto Evento Scroll jQuery</h1>
+	<hr>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sapiente soluta porro, obcaecati. Mollitia placeat perspiciatis optio facere rerum ea unde incidunt dolor quasi harum eligendi, quos qui eaque, accusamus.</p>
+
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$lastScrollTop = 0;
+			$winHeight = $(window).height();
+
+			$(window).scroll(function(event) {
+				$st = $(this).scrollTop();
+				if ($st > $lastScrollTop && $st > 120){
+			       // Down
+			       $('nav').addClass('hidenav');
+			   } else {
+			      // Up
+			      if($st + $winHeight < $(document).height()) {
+			      	$('nav').removeClass('hidenav');
+			      }
+			  }
+			  $lastScrollTop = $st;
+			});
+			
+		});
+	</script>
+</body>
+</html>

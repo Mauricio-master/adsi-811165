@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Vectores (JS)</title>
+	<style>
+		body {
+			background-color: #99ac7c;
+			font-family: Arial;
+		}
+		.center {
+			display: block;
+			margin: 0px auto;
+		}
+		h2 {
+			border-bottom: 1px solid rgba(255,255,255,.2);
+			text-align: center;
+			padding-bottom: 4px;
+			color: rgba(255,255,255,.8);
+		}
+		nav ul {
+			padding: 0px;
+			margin: 0px auto;
+			max-width: 912px;
+		}
+		nav ul li {
+			display: inline-block;
+			height: 180px;
+			margin: 4px;
+			list-style: none; 
+			width: 140px;
+			-webkit-transition: all 0.5s ease-in;
+		}
+		
+		nav ul li.c1 {
+			background: rgba(0,0,0,.3) url(imgs/gf_dipper.png) no-repeat center center;
+		}
+		nav ul li.c2 {
+			background: rgba(0,0,0,.3) url(imgs/gf_mabel.png) no-repeat center center;
+		}
+		nav ul li.c3 {
+			background: rgba(0,0,0,.3) url(imgs/gf_stan.png) no-repeat center center;
+		}
+		nav ul li.c4 {
+			background: rgba(0,0,0,.3) url(imgs/gf_wendy.png) no-repeat center center;
+		}
+		nav ul li.c5 {
+			background: rgba(0,0,0,.3) url(imgs/gf_pato.png) no-repeat center center;
+		}
+		nav ul li.c6 {
+			background: rgba(0,0,0,.3) url(imgs/gf_gideon.png) no-repeat center center;
+		}
+		nav ul li.character {
+			background-size: contain;
+		}
+		nav ul li.character:hover,
+		nav ul li.active {
+			background-color: rgba(0,0,0,.5);
+			cursor: pointer;
+			-webkit-transform: translateY(-5px) scale(1.05);
+		}
+		div.config {
+			margin: 0px auto;
+			text-align: center;
+			max-width: 912px;
+		}
+		div.config select,
+		div.config button {
+			background-color: #f26117;
+			color: #fff;
+			border: none;
+			border-radius: 0px;
+			font-size: 0.8em;
+			padding: 10px 30px;
+			outline: none;
+			-webkit-appearance: none;
+			-webkit-transition: all 0.5s ease-in;
+		}
+		div.config select {
+			background: rgba(0,0,0,.3) url(imgs/arrow-down.png) no-repeat 160px center;
+			background-size: 8%;
+		}
+		div.config button:hover {
+			cursor: pointer;
+			background-color: #b14712;
+		}
+		nav ul#showvector li {
+			background-size: contain;
+			height: 80px;
+			width: 80px;
+		}
+		nav ul#showvector li span{
+			background-color: rgba(255,255,255,.8);
+			font-size: 1.2em;
+			line-height: 1.6em;
+			padding: 4px 8px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="imgs/gf_logo.png" class="center">
+	</header>
+	<nav>
+		<h2>Seleccione el personaje:</h2>
+		<ul>
+			<li id="c1" class="character c1"></li>
+			<li id="c2" class="character c2"></li>
+			<li id="c3" class="character c3"></li>
+			<li id="c4" class="character c4"></li>
+			<li id="c5" class="character c5"></li>
+			<li id="c6" class="character c6"></li>
+		</ul>
+	</nav>
+	<section>
+		<h2>Configuración:</h2>
+		<div class='config'>
+			<select id="position">
+				<option value="">Seleccione Posición:</option>
+				<option value="1">Inicio</option>
+				<option value="2">Final</option>
+			</select>
+			<button id="add">Adicionar</button>
+			<button id="delete">Eliminar</button>
+		</div>
+		<h2>Lista:</h2>
+		<nav>
+			<ul id="showvector"></ul>
+		</nav>
+	</section>
+
+	<script>
+		var characters = document.getElementsByClassName('character');
+		var showvector = document.getElementById('showvector');
+		var cselected  = null;
+		var position   = null;
+		var btnadd     = document.getElementById('add');
+		var btndelete  = document.getElementById('delete');
+		var chvector   = new Array();
+
+		for (var i = 0; i < characters.length; i++) {
+			characters[i].onclick = function() {
+				inactiveCharacters();
+				activeCharacter(this);
+			}
+		}
+		function inactiveCharacters() {
+			for (var i = 0; i < characters.length; i++) {
+				characters[i].classList.remove('active');
+			}
+		}
+		function activeCharacter(elem) {
+			elem.classList.add('active');
+			cselected = elem.getAttribute('id');
+		}
+		function validateInputs() {
+			position = document.getElementById('position').value;
+			if(cselected != null && position.length > 0) {
+				return true;
+			} else{
+				alert('Por favor debe seleccionar un personaje y una posición!');
+			}
+		}
+		function renderVector() {
+			showvector.innerHTML = ""; 
+			for (var i = 0; i < chvector.length; i++) {
+				showvector.innerHTML += "<li class='"+chvector[i]+"'><span>"+i+"</span></li>";
+			}
+		}
+		btnadd.onclick = function() {
+			if(validateInputs()) {
+				if(position == 1) {
+					chvector.unshift(cselected);
+				}
+				if(position == 2) {
+					chvector.push(cselected);
+				}
+				renderVector();
+			}
+		}
+		btndelete.onclick = function() {
+			if(validateInputs()) {
+				if(position == 1) {
+					chvector.shift();
+				}
+				if(position == 2) {
+					chvector.pop();
+				}
+				renderVector();
+			}
+		}
+	</script>
+</body>
+</html>

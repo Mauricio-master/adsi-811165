@@ -1,0 +1,52 @@
+body {
+  background-color: #999;
+  font: 16px Tahoma;
+  color: #333;
+}
+.marcoppal {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 600px;
+}
+.encabezado {
+  background-color: #ddd;
+  padding: 20px;
+}
+.encabezado a {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 36px;
+  margin-left: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+}
+.encabezado a:hover {
+  background-color: #999;
+  color: #fff;
+}
+.contenido {
+  text-align: center;
+}
+.contenido img {
+  -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+}
+.contenido:hover img {
+  -webkit-transform: scale(1.1) rotate(6deg);
+          transform: scale(1.1) rotate(6deg);
+}
+.contenido p {
+  color: #777;
+  text-align: justify;
+  padding: 20px;
+  line-height: 24px;
+}
+.contenido:hover {
+  background-color: #eee;
+}
+.pie {
+  text-align: center;
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Métodos de Números JS</title>
+</head>
+<body>
+	<h1>Métodos de Números JS</h1>
+	<hr>
+	<input id="num" type="number" placeholder="Ingrese un número con decimales">
+	<button id="btn"> Mostrar </button>
+	<ul id="salida"></ul>
+
+	<script>
+		var btn    = document.getElementById('btn');
+		var salida = document.getElementById('salida');
+
+		btn.onclick = function() {
+			var num = parseFloat(document.getElementById('num').value);
+			
+			salida.innerHTML  = "<li> Cadena: '"+num.toString()+"'</li>";
+			salida.innerHTML += "<li> Ajustar(2): "+num.toFixed(2)+"</li>";
+			salida.innerHTML += "<li> Precisión(2): "+num.toPrecision(2)+"</li>";
+			salida.innerHTML += "<li> Entero: "+parseInt(num)+"</li>";
+			salida.innerHTML += "<li> Flotante: "+num+"</li>";
+		}
+	</script>
+</body>
+</html>

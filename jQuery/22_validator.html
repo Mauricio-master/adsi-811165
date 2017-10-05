@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validación de formularios con jQuery</title>
+	<style>
+		body {
+			font-family: Arial;
+			color: #888;
+		}
+		form {
+			margin: 50px auto;
+			width: 400px;
+		}
+		form input {
+			border-radius: 4px;
+			border: 1px solid #aaa;
+			color: #888;
+			display: block;
+			font-size: 1.2em;
+			margin-bottom: 24px;
+			outline: none;
+			padding: 10px;
+			width: 100%;
+		}
+		form input[type=submit] {
+			cursor: pointer;
+			border: none;
+			color: #fff;
+			background-color: #598cb4;
+			width: 105.5%;
+		}
+		form input.error {
+			border: 1px solid #a00;
+			background-color: rgba(255, 0, 0, .1);
+		}
+		form input.valid {
+			border: 1px solid #0a0;
+			background-color: rgba(0, 255, 0, .1);
+		}
+		div.field {
+			position: relative;
+		}
+		span.help-block.form-error {
+			background-color: #a00;
+			color: #fff;
+			position: absolute;
+			padding: 4px;
+			top: -20px;
+			left: 0px;
+			width: 414px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Validación de formularios con jQuery</h1>
+	<hr>
+
+	<form action="procesar.php" method="post" id="registro">
+		
+	   <div class="field">
+		   	<input type="text" 
+				   name="nombres" 
+				   placeholder="Nombre Completo"
+				   data-validation="length"
+				   data-validation-length="min4">
+	   </div>
+		<div class="field">
+			<input type="number"
+		   		   name="edad"
+		   		   placeholder="Edad"
+		   		   data-validation="requiredField"
+		   		   data-validation-allowing="range[1;99]">
+		</div>
+		<div class="field">
+			<input type="email"
+		   		   name="correo"
+		   		   placeholder="Correo Electrónico"
+		   		   data-validation="email">
+		</div>
+		<div class="field">
+			<input type="date"
+		   		   name="fecha"
+		   		   placeholder="Fecha de Nacimiento"
+		   		   data-validation="date"
+		   		   data-validation-format="dd/mm/yyyy">
+		</div>
+	   
+		<input type="submit" value="Enviar">
+	</form>
+
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
+	<script src="js/jquery.form-validator.es.js"></script>
+	<script>
+		$(document).ready(function() {
+			$.validate({ 
+				form: '#registro', 
+				language: es 
+			});
+		});
+	</script>
+</body>
+</html>

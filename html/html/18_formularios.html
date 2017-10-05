@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+  </head>
+  <body>
+    <form method="post">
+      <fieldset>
+        <legend>Datos de Usuario</legend>
+        <!-- Nombres -------------------->
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres"><br><br>
+        <!-- Contraseña -------------------->
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena"><br><br>
+        <!-- Foto-->
+        <label for="foto">Foto</label>
+        <input type="file" id="foto" accept="image/*"><br><br>
+        <!-- Lenguajes de Programación-->
+        <label>Lenguajes Programación:</label><br>
+        <label>PHP
+          <input type="checkbox" name="lenguajes" value="PHP">
+        </label>
+        <label>Java
+          <input type="checkbox" name="lenguajes" value="Java">
+        </label>
+        <label>C#
+          <input type="checkbox" name="lenguajes" value="C#">
+        </label><br><br>
+        <!-- Nacionalidad-->
+        <label>Nacionalidad</label><br>
+        <label>Colombia
+          <input type="radio" name="nacionalidad" value="Colombia">
+        </label>
+        <label>Venezuela
+          <input type="radio" name="nacionalidad" value="Venezuela">
+        </label>
+        <label>Ecuador
+          <input type="radio" name="nacionalidad" value="Ecuador">
+        </label><br><br>
+        <!-- Genero -------------------->
+        <label for="genero">Genero</label>
+        <select id="genero">
+          <option>Seleccione...</option>
+          <option value="F">Femenino</option>
+          <option value="M">Masculino</option>
+        </select><br><br>
+        <!-- Deporte-->
+        <label for="deporte">Deporte</label>
+        <select multiple="multiple" id="deporte">
+          <option value="1">Fútbol</option>
+          <option value="2">Baloncesto</option>
+          <option value="3">Tennis</option>
+          <option value="4">Natación</option>
+        </select><br><br>
+        <!-- Descripcion -------------------->
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" cols="40" rows="6"></textarea><br><br>
+        <!-- Botones-->
+        <input type="submit" value="Enviar Datos">
+        <input type="reset" value="Reiniciar Formulario">
+      </fieldset>
+    </form>
+  </body>
+</html>

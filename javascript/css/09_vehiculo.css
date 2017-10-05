@@ -1,0 +1,104 @@
+
+body {
+	background-color: #dddcc5;
+	font: 16px Tahoma;
+	margin: 0px;
+}
+
+ul#info {
+	background-color: #1d2326;
+	color: #dddcc5;
+	padding: 0px;
+	margin: 0px;
+	width: 320px;
+}
+
+ul#info li {
+	border-bottom: 1px dotted #dddcc5;
+}
+
+ul#info li span {
+	display: inline-block;
+	color: #958976;
+	padding: 18px;
+	width: 80px;
+}
+
+ul#info li:first-child,
+ul#info li:nth-child(7) {
+	background-color: #611427;
+	padding: 20px;
+	text-align: center;
+}
+
+ul#info li#ima {
+	position: relative;
+}
+
+ul#info li#ima img {
+	top: 6px;
+	position: absolute;
+	width: 120px;
+}
+
+ul#info li:last-child {
+	padding: 10px;
+	text-align: center;
+}
+
+ul#info li:last-child i {
+	opacity: 0.7;
+	-webkit-transition: all 0.5s;
+}
+
+ul#info li:last-child i:hover {
+	cursor: pointer;
+	opacity: 1;
+	-webkit-transform: scale(1.2);
+}
+
+div#vhcl {
+	margin: 40px 0px 0px 20px;
+}
+
+.arrancar img {
+	-webkit-animation: 0.1s animArrancar infinite;
+}
+
+@-webkit-keyframes animArrancar {
+	0%, 100% {
+		-webkit-transform: translateY(0px);
+	} 
+	50% {
+		-webkit-transform: translateY(-5px);
+	}
+}
+
+.avanzar {
+	-webkit-animation: 6s animAvanzar linear infinite;
+}
+
+@-webkit-keyframes animAvanzar {
+	0% {
+		-webkit-transform: translateX(0px);
+	} 
+	100% {
+		-webkit-transform: translateX(1000px);
+	}
+}
+
+.frenar {
+	-webkit-animation-play-state: paused;
+}
+
+div#vhcl div {
+	width: 120px;
+}
+
+.girar_izquierda div {
+	-webkit-transform: rotateY(180deg);
+}
+
+.girar_derecha div {
+	-webkit-transform: rotateY(0deg);
+}

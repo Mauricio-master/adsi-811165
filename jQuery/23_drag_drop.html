@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrastrar / Solgar jQuery UI</title>
+	<style>
+		.circle {
+			background-color: #b42a47;
+			border-radius: 60px;
+			height: 120px;
+			width: 120px;
+		}
+		.square {
+			background-color: #3758b4;
+			height: 120px;
+			width: 120px;
+		}
+		.target {
+			background-color: #41B46C;
+			border-radius: 160px;
+			height: 320px;
+			margin: 0px auto;
+			width: 320px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Arrastrar / Solgar jQuery UI</h1>
+	<hr>
+	<section class="circle"></section>
+	<br>
+	<section class="square"></section>
+	<section class="target"></section>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Arrastrar
+			$('.circle, .square').draggable({
+				cursor: 'move',
+				revert: 'invalid'
+			});
+			// Soltar
+			$('.target').droppable({
+				accept: ".circle",
+				drop: function(event, ui) {
+					$(this).css('background-color', '#b42a47');
+					$(ui.draggable).css('background-color', '#fff');
+				} 
+			});
+		});
+	</script>
+</body>
+</html>

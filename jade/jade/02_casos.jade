@@ -1,0 +1,39 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Casos (jade)
+  body
+    h1 Casos (jade)
+    - var amigos = 0
+    case amigos
+      when 0
+        p Usted no tiene amigos
+      when 1
+        p Usted tiene un amigo
+      default
+        p Usted tiene #{amigos} amigos
+    // Agrupar condiciones
+    - var dinero = 2
+    case dinero
+      when 0
+      when 1
+      when 2
+        p Usted no tiene dinero
+      default
+        p Usted tiene $#{dinero} pesos
+    // Por linea
+    - var nivelhtml = 8
+    case nivelhtml
+      when 0:  p Su nivel de html es #{nivelhtml}
+      when 1:  p Su nivel de html es #{nivelhtml}
+      when 2:  p Su nivel de html es #{nivelhtml}
+      when 3:  p Su nivel de html es #{nivelhtml}
+      when 4:  p Su nivel de html es #{nivelhtml}
+      when 5:  p Su nivel de html es #{nivelhtml}
+      when 6:  p Su nivel de html es #{nivelhtml}
+      when 7:  p Su nivel de html es #{nivelhtml}
+      when 8:  p Su nivel de html es #{nivelhtml}
+      when 9:  p Su nivel de html es #{nivelhtml}
+      when 10: p Su nivel de html es #{nivelhtml}
+    

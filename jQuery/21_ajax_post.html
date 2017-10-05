@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax POST jQuery</title>
+	<style>
+		body {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 100vh;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ajax POST jQuery</h1>
+	<hr>
+	<select id="bgs">
+		<option value="">Seleccione Fondo de Pantalla</option>
+		<option value="bg1">Street Fighters</option>
+		<option value="bg2">Naruto Shipuden</option>
+		<option value="bg3">Seven Deadly Signs</option>
+	</select>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#bgs').change(function(event) {
+				$bg = $(this).val();
+				if($bg != '') {
+					$.post('fondos.php', {bg: $bg}, function(data, status, xhr) {
+						if(status == 'success') {
+							$('body').css('background-image', data);
+						}
+					});
+				} else {
+					alert('Por favor seleccione un Fondo e Pantalla!');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

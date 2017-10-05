@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Efectos jQuery</title>
+	<style>
+		body {
+			background-color: #bce2f5;
+			font-family: Arial;
+		}
+		section {
+			background-color: #fff;
+			color: #666;
+			display: inline-block;
+			padding: 20px;
+			margin: 10px;
+			vertical-align: top;
+			width: 300px;
+		}
+		section h2 {
+			text-align: center;
+		}
+		section button {
+			background-color: #65a1c4;
+			color: #fff;
+			border: none;
+			font-size: 1em;
+			display: block;
+			padding: 10px;
+			width: 100%;
+		}
+		section button:hover {
+			cursor: pointer;
+			background-color: #5589a7;
+		}
+	</style>
+</head>
+<body>
+	<h1>Efectos jQuery</h1>
+	<hr>
+	<section>
+		<h2>Hide / Show</h2>
+		<img src="imgs/kiminonawa.jpg">
+		<button id="btn1">Ocultar</button>
+		<button id="btntoggle1">Toggle</button>
+	</section>
+	<!-- - - - - - - - - - - - - - - - - - -->
+	<section>
+		<h2>SlideDown / SlideUp</h2>
+		<img src="imgs/kiminonawa.jpg">
+		<button id="btn2">Deslizar Abajo</button>
+		<button id="btntoggle2">SlideToggle</button>
+		<button id="btnstop">Parar</button>
+	</section>
+	<!-- - - - - - - - - - - - - - - - - - -->
+	<section>
+		<h2>FadeOut / FadeIn / FadeTo</h2>
+		<img src="imgs/kiminonawa.jpg">
+		<button id="btn3">Desvanecer</button>
+		<button id="btntoggle3">FadeToggle</button>
+		<button id="btnto">FadeTo</button>
+	</section>
+	<!-- - - - - - - - - - - - - - - - - - -->
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('body').on('click', '#btn1', function(event) {
+				event.preventDefault();
+				if($(this).text() == 'Ocultar') {
+					$(this).prev().hide();
+					$(this).text('Mostrar');
+				} else {
+					$(this).prev().show();
+					$(this).text('Ocultar');
+				}
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btntoggle1', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().toggle();
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btn2', function(event) {
+				event.preventDefault();
+				if($(this).text() == 'Deslizar Abajo') {
+					$(this).prev().slideUp(2000);
+					$(this).text('Deslizar Arriba');
+				} else {
+					$(this).prev().slideDown(2000);
+					$(this).text('Deslizar Abajo');
+				}
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btntoggle2', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().slideToggle(2000);
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btnstop', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().prev().stop();
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btn3', function(event) {
+				event.preventDefault();
+				if($(this).text() == 'Desvanecer') {
+					$(this).prev().fadeOut(1200);
+					$(this).text('Aparecer');
+				} else {
+					$(this).prev().fadeIn(1200);
+					$(this).text('Desvanecer');
+				}
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btntoggle3', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().fadeToggle(1000);
+			});
+			/* - - - - - - - - - - - - - - - - - - - - - - - */
+			$('body').on('click', '#btnto', function(event) {
+				event.preventDefault();
+					$(this).prev().prev().prev().fadeTo(1000, 0.5);
+			});
+
+		});
+	</script>
+</body>
+</html>
