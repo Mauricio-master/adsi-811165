@@ -1,0 +1,12 @@
+body {
+	background-color: #fff;
+}
+
+div.container-fluid {
+	padding-top: 80px;
+}
+
+ul.block-center {
+	margin: 0px auto;
+	width: 320px;
+}
