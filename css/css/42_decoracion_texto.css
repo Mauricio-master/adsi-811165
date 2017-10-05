@@ -1,0 +1,12 @@
+body {
+  font: 1.6em Arial;
+}
+p.decor1 {
+  text-decoration: underline;
+}
+p.decor2 {
+  text-decoration: overline;
+}
+p.decor3 {
+  text-decoration: line-through;
+}

@@ -1,0 +1,24 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee+Inline|Josefin+Sans';
+body {
+  background-color: #aaa;
+}
+section.principal {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 40px auto;
+  width: 800px;
+}
+h1 {
+  color: #999;
+  font-family: 'Bungee Inline';
+  font-size: 2.5em;
+  text-align: center;
+}
+p {
+  color: #666;
+  font-family: 'Josefin Sans';
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: justify;
+}

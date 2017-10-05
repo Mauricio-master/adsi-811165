@@ -1,0 +1,40 @@
+body {
+  font: 16px Tahoma;
+}
+section {
+  margin: 0px auto;
+  padding: 40px;
+}
+.margin {
+  background-color: #5ec9ef;
+  width: 400px;
+}
+.border {
+  background-color: #efa111;
+}
+.padding {
+  background-color: #f96f81;
+}
+.content {
+  background-color: #fff3a9;
+}
+ul {
+  list-style: none;
+}
+ul li span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+.color1 {
+  background-color: #5ec9ef;
+}
+.color2 {
+  background-color: #efa111;
+}
+.color3 {
+  background-color: #f96f81;
+}
+.color4 {
+  background-color: #fff3a9;
+}

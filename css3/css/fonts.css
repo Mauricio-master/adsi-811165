@@ -1,0 +1,19 @@
+/** Transformers **/
+@font-face {
+	font-family: 'Transformers';
+	src: url('fonts/Transformers.eot');
+	src: local('☺'), url('fonts/Transformers.woff') format('woff'), url('fonts/Transformers.ttf') format('truetype'), url('fonts/Transformers.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/** Catherine **/
+@font-face {
+	font-family: 'Catherine';
+	src: url('fonts/Catherine.eot');
+	src: local('☺'), url('fonts/Catherine.woff') format('woff'), url('fonts/Catherine.ttf') format('truetype'), url('fonts/Catherine.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+

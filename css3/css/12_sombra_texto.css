@@ -1,0 +1,23 @@
+body {
+  background-color: #ddd;
+  font: 16px Arial;
+}
+section.sombras {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 600px;
+}
+#txt1 {
+  text-shadow: 0px 0px 8px #000;
+}
+#txt2 {
+  text-shadow: 4px 2px 1px #f00;
+}
+#txt3 {
+  text-shadow: 0px 8px 8px #00f;
+}
+p {
+  color: #fff;
+  text-shadow: 0px 0px 4px #000;
+}

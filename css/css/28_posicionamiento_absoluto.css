@@ -1,0 +1,33 @@
+body {
+  font: 16px Tahoma;
+}
+section {
+  border: 2px solid #999;
+  height: 260px;
+  margin: 20px auto;
+  padding: 10px;
+  position: relative;
+  width: 600px;
+}
+section div {
+  display: inline-block;
+  border: 2px solid #ccc;
+  line-height: 120px;
+  height: 120px;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 188px;
+}
+section div.nomargen {
+  margin-right: 0px;
+}
+section div.grande {
+  width: 594px;
+}
+section div.absoluta {
+  background-color: rgba(220,220,220,0.8);
+  position: absolute;
+  top: 50px;
+  left: 380px;
+}

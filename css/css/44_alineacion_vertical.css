@@ -1,0 +1,26 @@
+body {
+  background-color: #333;
+  font-family: Arial;
+  color: #fff;
+}
+section#box {
+  background-color: #fff;
+  color: #777;
+  margin: 20px auto;
+  padding: 20px;
+  width: 800px;
+}
+article {
+  border: 2px solid #c0c0c0;
+  display: inline-block;
+  width: 258px;
+}
+article.baseline {
+  vertical-align: baseline;
+}
+article.top {
+  vertical-align: top;
+}
+article.middle {
+  vertical-align: middle;
+}

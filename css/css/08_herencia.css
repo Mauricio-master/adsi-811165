@@ -1,0 +1,9 @@
+/* Herencia */
+body {
+  background-color: #dc143c;
+  color: #ffa500;
+}
+article p {
+  background-color: #008080;
+  color: #fff;
+}

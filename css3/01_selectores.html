@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Selectores CSS 3</title>
+	<link rel="stylesheet" href="css/01_selectores.css">
+</head>
+<body>
+	<h1>Nuevos Selectores CSS 3</h1>
+	<hr>
+	<!-- .............. ( p~ul ) .............. -->
+	<!-- ~ -> Virguliña -->
+	<fieldset class="ejer1">
+		<legend>
+			<h2>p~ul</h2>
+		</legend>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		</p>
+		<ul>
+			<li>Lorem Ipsum 1</li>
+			<li>Lorem Ipsum 2</li>
+			<li>Lorem Ipsum 3</li>
+		</ul>
+		<ul>
+			<li>Consectetur Adipisicing 1</li>
+			<li>Consectetur Adipisicing 2</li>
+			<li>Consectetur Adipisicing 3</li>
+		</ul>
+	</fieldset>
+	<!-- .............. ( a[href^="https"] ) .............. -->
+	<fieldset class="ejer2">
+		<legend>
+			<h2>a[href^="https"]</h2>
+		</legend>
+		<a href="http://www.google.com"> Ir a Google</a> |  
+		<a href="http://www.yahoo.com"> Ir a Yahoo</a> |  
+		<a href="https://www.web.whatsapp.com"> Ir a Whatsapp</a> |  
+		<a href="http://www.facebook.com"> Ir a Facebook</a> 
+	</fieldset>
+	<!-- .............. ( a[href$=".pdf"] ) .............. -->
+	<fieldset class="ejer3">
+		<legend>
+			<h2>a[href$=".pdf"]</h2>
+		</legend>
+		<a href="libros/mundo.text"> La vuelta al mundo en 80 días</a> |  
+		<a href="libros/alquimista.docx"> El Alquimista</a> |  
+		<a href="libros/principito.pdf"> El principito</a> |  
+		<a href="libros/funerales.doc"> Los funerales de la mama grande</a> 
+	</fieldset>	
+	<!-- .............. ( a[href*="google"] ) .............. -->
+	<fieldset class="ejer4">
+		<legend>
+			<h2>a[href*="google"]</h2>
+		</legend>
+		<a href="http://maps.google.com"> Mapas de Google</a> |  
+		<a href="http://maps.apple.com"> Mapas de Apple</a> |  
+		<a href="http://drive.google.com"> Drive de Google</a> |  
+		<a href="http://videos.vimeo.com"> Videos de Vimeo</a> 
+	</fieldset>	
+	<!-- .............. ( p:first-of-type ) .............. -->
+	<fieldset class="ejer5">
+		<legend>
+			<h2>p:first-of-type</h2>
+		</legend>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+	</fieldset>	
+	<!-- .............. ( p:last-of-type ) .............. -->
+	<fieldset class="ejer6">
+		<legend>
+			<h2>p:last-of-type</h2>
+		</legend>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+	</fieldset>
+	<!-- .............. ( p:only-of-type ) .............. -->
+	<fieldset class="ejer7">
+		<legend>
+			<h2>p:only-of-type</h2>
+		</legend>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+	</fieldset>
+	<!-- .............. ( p:only-of-type ) .............. -->
+	<fieldset class="ejer7">
+		<legend>
+			<h2>p:only-of-type</h2>
+		</legend>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quaerat.</p>
+	</fieldset>
+	<!-- .............. ( p:only-child ) .............. -->
+	<fieldset class="ejer8">
+		<legend>
+			<h2>p:only-child</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( p:nth-child(2) ) .............. -->
+	<fieldset class="ejer9">
+		<legend>
+			<h2>p:nth-child(2)</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( p:nth-last-child(2) ) .............. -->
+	<fieldset class="ejer10">
+		<legend>
+			<h2>p:nth-last-child(2)</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( p:nth-of-type(3) ) .............. -->
+	<fieldset class="ejer11">
+		<legend>
+			<h2>p:nth-of-type(3)</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( p:nth-last-of-type(4) ) .............. -->
+	<fieldset class="ejer12">
+		<legend>
+			<h2>p:nth-last-of-type(4)</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( p:last-child ) .............. -->
+	<fieldset class="ejer13">
+		<legend>
+			<h2>p:last-child</h2>
+		</legend>
+		<ul>
+			<li>Lorem Ipsum 1</li>
+			<li>Lorem Ipsum 2</li>
+			<li>Lorem Ipsum 3</li>
+		</ul>
+	</fieldset>
+	<!-- .............. ( :root ) .............. -->
+	<fieldset class="ejer14">
+		<legend>
+			<h2>:root</h2>
+		</legend>
+		<p> Revisar el fondo de la página</p>
+	</fieldset>
+	<!-- .............. ( p:empty ) .............. -->
+	<fieldset class="ejer15">
+		<legend>
+			<h2>p:empty</h2>
+		</legend>
+		<section>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p></p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( #destino:target ) .............. -->
+	<fieldset class="ejer16">
+		<legend>
+			<h2>#destino:target</h2>
+		</legend>
+		<a href="#destino1"> Destino 1</a>
+		<a href="#destino2"> Destino 2</a>
+		<a href="#destino3"> Destino 3</a>
+		<section>
+			<p id="destino1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p id="destino2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<p id="destino3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</section>
+	</fieldset>
+	<!-- .............. ( input:enabled / input:disabled ) .............. -->
+	<fieldset class="ejer17">
+		<legend>
+			<h2>input:enabled / input:disabled</h2>
+		</legend>
+		<input type="text" placeholder="Nombre">
+		<input type="text" placeholder="Apellido" disabled>
+		<input type="text" placeholder="Edad" disabled>
+	</fieldset>
+	<!-- .............. ( input:checked ) .............. -->
+	<fieldset class="ejer18">
+		<legend>
+			<h2>input:checked</h2>
+		</legend>
+		<label>
+			<input type="checkbox" name="pais" checked> Colombia
+		</label>
+		<br>
+		<label>
+			<input type="checkbox" name="pais"> Brasil
+		</label>
+		<br>
+		<label>
+			<input type="checkbox" name="pais"> Peru
+		</label>
+	</fieldset>
+	<!-- .............. ( :not(p) ) .............. -->
+	<fieldset class="ejer19">
+		<legend>
+			<h2>:not(p)</h2>
+		</legend>
+		<section>
+			<div> Lorem idivsum dolor sit amet, consectetur adipisicing elit.</div>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<div> Lorem idivsum dolor sit amet, consectetur adipisicing elit.</div>
+			<div> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+		</section>
+	</fieldset>
+	<!-- .............. ( ::selection ) .............. -->
+	<fieldset class="ejer20">
+		<legend>
+			<h2>::selection</h2>
+		</legend>
+		<p> Seleccionar texto de la página</p>
+	</fieldset>
+</body>
+</html>

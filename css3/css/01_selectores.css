@@ -1,0 +1,70 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font: 1.6rem Arial;
+}
+fieldset {
+  border: none;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+}
+fieldset legend {
+  background-color: #ed4786;
+  color: #fff;
+  padding: 10px 40px;
+}
+fieldset legend h2 {
+  margin: 0px;
+  padding: 0px;
+}
+.ejer1 p~ul,
+.ejer2 a[href^="https"],
+.ejer3 a[href$=".pdf"],
+.ejer4 a[href*="google"],
+.ejer5 p:first-of-type,
+.ejer6 p:last-of-type,
+.ejer7 p:only-of-type,
+.ejer8 section p:only-child,
+.ejer9 section p:nth-child(2),
+.ejer10 section p:nth-last-child(2),
+.ejer11 section p:nth-of-type(3),
+.ejer12 section p:nth-last-of-type(4),
+.ejer13 ul li:last-child,
+.ejer15 p:empty,
+.ejer16 #destino1:target,
+.ejer16 #destino2:target,
+.ejer16 #destino3:target,
+.ejer19 section :not(p) {
+  background-color: #e5ffc7;
+  border: 2px solid #acc62b;
+  color: #70811a;
+  padding: 8px;
+}
+:root {
+  background: -webkit-linear-gradient(left, #ab3361, #6a203c);
+}
+input {
+  border: none;
+  padding: 10px;
+}
+input:enabled {
+  background-color: #e5ffc7;
+}
+input:disabled {
+  background-color: #ffcfe1;
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+  background-color: #ab3361;
+  cursor: pointer;
+}
+input:checked {
+  background-color: #acc62b;
+}
+::selection {
+  background-color: #505d11;
+  color: #fff;
+}

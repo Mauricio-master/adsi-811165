@@ -1,0 +1,35 @@
+body {
+  color: #777;
+  font: 16px Arial;
+}
+section.padre {
+  border: 2px solid #ccc;
+  height: 300px;
+  padding: 10px;
+  width: 300px;
+}
+section.padre div {
+  border: 2px solid #ccc;
+  height: 60px;
+  line-height: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 120px;
+}
+section.padre div.flotar {
+  background-color: #ddd;
+  float: right;
+}
+section.padreimagen {
+  border: 2px solid #ccc;
+  height: 400px;
+  padding: 10px;
+  width: 600px;
+}
+section.padreimagen img {
+  float: left;
+  margin-right: 10px;
+}
+section.padreimagen p.limpiar {
+  clear: left;
+}

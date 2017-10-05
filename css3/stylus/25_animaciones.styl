@@ -1,0 +1,24 @@
+
+
+section.animacion
+	animation 0.5ms animAnimacion infinite
+	
+@keyframes animAnimacion
+	from
+		transform translateX(0px)
+	to
+		transform translateX(20px)
+
+div.forma
+	background radial-gradient(#75EB43, #407f26)
+	border-radius 50%
+	height 200px
+	margin 200px auto
+	width 200px
+	animation 0.5s animForma infinite ease-in-out alternate
+	
+@keyframes animForma
+	from
+		transform translateY(0px)
+	to
+		transform translateY(-160px)

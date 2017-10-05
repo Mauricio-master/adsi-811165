@@ -1,0 +1,12 @@
+p {
+  border: 4px solid #ccc;
+  display: inline-block;
+  font: 1.5em Arial;
+  vertical-align: top;
+  margin-left: 100px;
+  padding: 4px;
+  width: 100px;
+}
+p.parr2 {
+  word-wrap: break-word;
+}

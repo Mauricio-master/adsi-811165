@@ -1,0 +1,89 @@
+body {
+  background-color: #a8bf57;
+  color: #6f7f39;
+  font: 16px Arial;
+}
+section {
+  background-color: #e1ffcf;
+  border: 10px solid #6f7f39;
+  padding: 20px;
+  margin: 20px auto;
+  width: 800px;
+}
+/* Pseudo Clases para Enlaces */
+nav a:link,
+nav a:visited {
+  background-color: #6f7f39;
+  border: 4px solid #6f7f39;
+  color: #e1ffcf;
+  display: inline-block;
+  padding: 20px 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 168px;
+}
+nav a:hover {
+  background-color: #fff;
+  border: 4px solid #6f7f39;
+  color: #6f7f39;
+}
+nav a:active {
+  background-color: #d82a4f;
+  border: 4px solid #d82a4f;
+  color: #fff;
+}
+/* Pseudo Clase para Elementos de Formulario */
+::-webkit-input-placeholder {
+  color: #fff;
+}
+input {
+  background-color: #6f7f39;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  display: block;
+  outline: none;
+  padding: 20px;
+  width: 96%;
+}
+input:focus {
+  background-color: #94a94c;
+  color: #5a672e;
+}
+/* Insertar Contenido Antes-Después */
+div.box::after,
+div.box::before {
+  content: '';
+  position: absolute;
+}
+div.box {
+  background-color: #d82a4f;
+  height: 200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+}
+div.box::after {
+  background-color: #ff2e5c;
+  height: 100px;
+  top: 0px;
+  left: 100px;
+  width: 100px;
+}
+div.box::before {
+  background-color: #ff2e5c;
+  height: 100px;
+  top: 100px;
+  left: 0px;
+  width: 100px;
+}
+/* Primera Letra - Primera Línea */
+p::first-letter {
+  color: #6f7f39;
+  font-weight: bolder;
+  font-size: 4em;
+}
+p::first-line {
+  color: #ff2e5c;
+}

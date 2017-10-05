@@ -1,0 +1,23 @@
+section {
+  background: #fce9c3 url("../imgs/origen.jpg") no-repeat;
+  border: 50px solid transparent;
+  height: 100px;
+  padding: 50px;
+  margin: 20px auto;
+  width: 400px;
+}
+section.corte1 {
+  background-clip: border-box;
+}
+section.corte2 {
+  background-clip: padding-box;
+}
+section.corte2 h2 {
+  color: #fff;
+}
+section.corte3 {
+  background-clip: content-box;
+}
+section.corte3 h2 {
+  color: #fff;
+}

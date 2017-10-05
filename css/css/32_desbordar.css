@@ -1,0 +1,32 @@
+body {
+  font: 16px Arial;
+  color: #444;
+}
+main {
+  margin: 20px auto;
+  width: 800px;
+}
+main section {
+  border: 2px solid #ccc;
+  display: inline-block;
+  height: 300px;
+  padding: 10px;
+  text-align: justify;
+  vertical-align: top;
+  width: 200px;
+}
+main section h4 {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 0px;
+  text-align: center;
+}
+main section.box1 {
+  overflow: visible;
+}
+main section.box2 {
+  overflow: hidden;
+}
+main section.box3 {
+  overflow: scroll;
+}

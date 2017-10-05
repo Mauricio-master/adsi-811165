@@ -1,0 +1,88 @@
+html
+	font-size 62.5%
+body
+	font 1.6rem Arial
+fieldset
+	border none
+	background-color #fff
+	padding 20px
+	margin 20px auto
+	width 800px
+fieldset 
+	legend
+		background-color #ED4786
+		color #fff
+		padding 10px 40px
+fieldset 
+	legend 
+		h2
+			margin 0px
+			padding 0px
+
+// Selecciona los elemento <ul> precedidos por <p>
+.ejer1 p~ul
+// Selecciona los elementos <a> cuyo valor de 'href' comience con 'https'
+.ejer2 a[href^="https"]
+// Selecciona los elementos <a> cuyo valor de 'href' termina con '.pdf'
+.ejer3 a[href$=".pdf"]
+// Selecciona los elementos <a> cuyo valor de 'href' contiene 'google'
+.ejer4 a[href*="google"]
+// Selecciona el primer elemento <p>	
+.ejer5 p:first-of-type	
+// Selecciona el ultimo elemento <p>	
+.ejer6 p:last-of-type	
+// Selecciona el unico elemento <p>	
+.ejer7 p:only-of-type	
+// Selecciona el unico hijo <p>	
+.ejer8 section p:only-child	
+// Selecciona el hijo número 2 <p>	
+.ejer9 section p:nth-child(2)
+// Selecciona el penultimo <p>	
+.ejer10 section p:nth-last-child(2)	
+// Selecciona el tercer elemento <p>	
+.ejer11 section p:nth-of-type(3)
+// Selecciona el cuarto elemento antes del último <p>	
+.ejer12 section p:nth-last-of-type(4)	
+// Selecciona el último elemento <li>	
+.ejer13 ul li:last-child
+// Selecciona elemento <p> vacio	
+.ejer15 p:empty	
+// Selecciona elemento con id 'destino'	
+.ejer16 #destino1:target
+.ejer16 #destino2:target
+.ejer16 #destino3:target
+.ejer19 section :not(p)							
+	background-color #e5ffc7
+	border 2px solid #acc62b
+	color #70811a
+	padding 8px
+// Aplica color de fondo al elemento raíz del documento	
+:root
+	background -webkit-linear-gradient(left, #ab3361, #6a203c)
+
+input
+	border none
+	padding 10px
+// Seleccionar los <input> habilitados	
+input:enabled
+	background-color #e5ffc7
+// Seleccionar los <input> inhabilitados		
+input:disabled	
+	background-color #ffcfe1
+	
+
+// Elementos de tipo <checkbox>
+input[type=checkbox]
+	-webkit-appearance none
+	background-color #ab3361
+	cursor pointer
+// Elemento checkeado
+input:checked
+	background-color #acc62b
+
+// Formato para la selección de texto en la página	
+::selection
+	background-color #505d11
+	color #fff
+
+
